@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #101314;
+}
+nav {
+    display: flex; /* Flexbox layout */
+    width: 100%; /* Full width */
+    justify-content: space-between; /* Space between the logo and "About Us" */
+    align-items: center; /* Center items vertically */
+    height: 80px; /* Height of the navigation bar */
+    z-index: 111; /* Stack order */
+    padding: 0 20px; /* Padding to avoid touching the edges */
+    background-color: #101314; /* Add background color if needed */
+    
+}
+
+.logo {
+    display: flex; /* Flexbox layout */
+    font-size: 40px; /* Font size */
+    font-weight: 800; /* Font weight */
+    color: #fffffa; /* Font color */
+    letter-spacing: 3px; /* Letter spacing */
+    cursor: pointer; /* Pointer cursor */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+b{
+    color:#ee4b2b ;
+}
+
+.about-us {
+    margin: 0; /* Remove unnecessary margin */
+}
+
+.about-us a {
+    font-size: 15px; /* Font size similar to .navItems li a */
+    color: #fffffa; /* Font color similar to .navItems li a */
+    letter-spacing: 3px; /* Letter spacing */
+    text-decoration: none; /* Remove underline */
+    text-transform: capitalize; /* Capitalize text */
+    margin: 0; /* Remove unnecessary margin */
+}
+
+/* Hover effect similar to .navItems li:hover a, .links a:hover */
+.about-us a:hover {
+    color: #ee4b2b; /* Change color on hover */
+}
+
+
+#Join-btn{
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+#video-streams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Increased min size for better visibility */
+    height: 70vh; /* Reduced height to make it more compact */
+    width: 90%; /* Use a percentage for responsiveness */
+    max-width: 1000px; /* Limit max width to avoid too wide a layout */
+    margin: 0 auto; /* Center alignment */
+    gap: 10px; /* Add some spacing between video containers */
+}
+
+.video-container {
+    max-height: 100%; /* Maintain max height within the grid */
+    border: 2px solid black; /* Border for visual separation */
+    background-color: #203A49; /* Background color */
+    overflow: hidden; /* Ensure content stays within the bounds */
+    border-radius: 8px; /* Add some rounding for a cleaner look */
+}
+
+.video-player {
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+    object-fit: cover; /* Ensure video scales nicely */
+}
+
+#stream-control {
+    display: none; /* Changed from none for visibility (can be toggled later) */
+    justify-content: center;
+    margin-top: 0.5em;
+}
+
+button{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    background-color: #3d535f;
+    outline: none;
+    border: none;
+    padding: 8px 14px;
+    margin: 25px 8px;
+    text-transform: capitalize;
+    cursor: pointer;
+    letter-spacing: 2px;
+    box-shadow: 0 15px 10px rgba(0,0,0,0.4);
+}
+button:hover{
+    background-color: #ee4b2b;
+}
+@media screen and (max-width:1400px) {
+    #video-streams{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        width: 95%;
+    }
+}
